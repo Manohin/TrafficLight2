@@ -51,7 +51,11 @@ struct ContentView: View {
             }
             .padding()
         }
+        }
     }
+
+private func switchLight() {
+   
 }
 
 private func switchLight() {
