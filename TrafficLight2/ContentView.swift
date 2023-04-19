@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var redLightStatus = 0
+    @State private var buttonLabel = "START"
+    @State private var redLightAlpha = 1.0
+    @State private var yellowLightAlpha = 0.3
+    @State private var greenLightAlpha = 0.3
     
     var body: some View {
         ZStack {
@@ -17,23 +20,11 @@ struct ContentView: View {
                 .ignoresSafeArea()
             VStack {
                 VStack {
-                    Circle()
-                        .foregroundColor(.red)
-                        .overlay(Circle().stroke(lineWidth: 2).colorInvert())
-                        .shadow(color: .red, radius: 20)
-                        .padding(.bottom, 10)
-                    Circle()
-                        .foregroundColor(.yellow)
-                        .overlay(Circle().stroke(lineWidth: 2).colorInvert())
-                        .shadow(color: .yellow, radius: 20)
-                        .padding(.bottom, 10)
-                    Circle()
-                        .foregroundColor(.green)
-                        .overlay(Circle().stroke(lineWidth: 2).colorInvert())
-                        .shadow(color: .green, radius: 20)
-                        .padding(.bottom, 10)
+                    CircleView(color: .red, alpha: redLightAlpha)
+                    CircleView(color: .yellow, alpha: yellowLightAlpha)
+                    CircleView(color: .green, alpha: greenLightAlpha)
                 }
-                .frame(width: 300, height: 300)
+                .frame(width: 100, height: 300)
                 Spacer()
                 
                 Button(action: switchLight) {
@@ -42,7 +33,7 @@ struct ContentView: View {
                             .overlay(RoundedRectangle(cornerRadius: 10)
                                 .stroke(lineWidth: 3)
                                 .foregroundColor(.white))
-                        Text("NEXT")
+                        Text(buttonLabel)
                             .foregroundColor(.white)
                             .font(.title)
                     }
@@ -52,11 +43,26 @@ struct ContentView: View {
             .padding()
         }
     }
+    
+    private func switchLight() {
+        
+        if redLightAlpha == 1.0 {
+            yellowLightAlpha = 0.3
+            greenLightAlpha = 0.3
+        } else if yellowLightAlpha == 1.0 {
+            redLightAlpha = 0.3
+            greenLightAlpha = 0.3
+        } else {
+            redLightAlpha = 0.3
+            yellowLightAlpha = 0.3
+        }
+        
+    }
+    private func toggleStatus() {
+        
+    }
 }
 
-private func switchLight() {
-    
-}
 
 
 struct ContentView_Previews: PreviewProvider {

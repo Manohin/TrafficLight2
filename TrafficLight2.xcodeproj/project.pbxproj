@@ -11,6 +11,7 @@
 		8A87BDBE29F07659005DDF60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A87BDBD29F07659005DDF60 /* ContentView.swift */; };
 		8A87BDC029F0765B005DDF60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A87BDBF29F0765B005DDF60 /* Assets.xcassets */; };
 		8A87BDC329F0765B005DDF60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A87BDC229F0765B005DDF60 /* Preview Assets.xcassets */; };
+		8A87BDCA29F092D2005DDF60 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A87BDC929F092D2005DDF60 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		8A87BDBD29F07659005DDF60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8A87BDBF29F0765B005DDF60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A87BDC229F0765B005DDF60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8A87BDC929F092D2005DDF60 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				8A87BDBB29F07659005DDF60 /* TrafficLight2App.swift */,
+				8A87BDC929F092D2005DDF60 /* CircleView.swift */,
 				8A87BDBD29F07659005DDF60 /* ContentView.swift */,
 				8A87BDBF29F0765B005DDF60 /* Assets.xcassets */,
 				8A87BDC129F0765B005DDF60 /* Preview Content */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A87BDCA29F092D2005DDF60 /* CircleView.swift in Sources */,
 				8A87BDBE29F07659005DDF60 /* ContentView.swift in Sources */,
 				8A87BDBC29F07659005DDF60 /* TrafficLight2App.swift in Sources */,
 			);
