@@ -16,7 +16,7 @@ struct CircleView: View {
         Circle()
             .foregroundColor(color)
             .opacity(alpha)
-            .overlay(Circle().stroke(lineWidth: 2).colorInvert())
+            .overlay(Circle().stroke(lineWidth: 4).foregroundColor(.gray))
             .shadow(color: color, radius: 30)
             .padding(.bottom, 10)
     }
@@ -24,6 +24,6 @@ struct CircleView: View {
 
 struct CircleView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleView(color: .green, alpha: 1)
+        CircleView(color: .green, alpha: 1.0)
     }
 }
