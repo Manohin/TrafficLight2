@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var buttonLabel = "START"
-    @State private var redLightAlpha = 1.0
+    @State private var redLightAlpha = 0.3
     @State private var yellowLightAlpha = 0.3
     @State private var greenLightAlpha = 0.3
     
@@ -47,23 +47,25 @@ struct ContentView: View {
     private func switchLight() {
         
         if redLightAlpha == 1.0 {
-            yellowLightAlpha = 0.3
+            yellowLightAlpha = 1
             greenLightAlpha = 0.3
+            redLightAlpha = 0.3
         } else if yellowLightAlpha == 1.0 {
             redLightAlpha = 0.3
+            greenLightAlpha = 1.0
+            yellowLightAlpha = 0.3
+        } else if greenLightAlpha == 1.0 {
+            redLightAlpha = 1
+            yellowLightAlpha = 0.3
             greenLightAlpha = 0.3
         } else {
-            redLightAlpha = 0.3
+            redLightAlpha = 1.0
             yellowLightAlpha = 0.3
+            greenLightAlpha = 0.3
+            buttonLabel = "NEXT"
         }
-        
-    }
-    private func toggleStatus() {
-        
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
