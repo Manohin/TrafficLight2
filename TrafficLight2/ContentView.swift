@@ -24,20 +24,20 @@ struct ContentView: View {
                     CircleView(color: .yellow, alpha: yellowLightAlpha)
                     CircleView(color: .green, alpha: greenLightAlpha)
                 }
-                .frame(width: 100, height: 300)
+                .frame(width: 110, height: 400)
                 Spacer()
                 
                 Button(action: switchLight) {
                     ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .overlay(RoundedRectangle(cornerRadius: 10)
-                                .stroke(lineWidth: 3)
+                        RoundedRectangle(cornerRadius: 15)
+                            .overlay(RoundedRectangle(cornerRadius: 15)
+                                .stroke(lineWidth: 4)
                                 .foregroundColor(.white))
                         Text(buttonLabel)
                             .foregroundColor(.white)
                             .font(.title)
                     }
-                    .frame(width: 150, height: 40)
+                    .frame(width: 200, height: 60)
                 }
             }
             .padding()
