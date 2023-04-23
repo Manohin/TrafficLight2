@@ -10,12 +10,12 @@ import SwiftUI
 struct CircleView: View {
     
     let color: Color
-    let alpha: Double
+    let opacity: Double
     
     var body: some View {
         Circle()
             .foregroundColor(color)
-            .opacity(alpha)
+            .opacity(opacity)
             .overlay(Circle().stroke(lineWidth: 1.5).foregroundColor(color))
             .shadow(color: color, radius: 30)
             .padding(.bottom, 10)
@@ -24,6 +24,6 @@ struct CircleView: View {
 
 struct CircleView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleView(color: .green, alpha: 1.0)
+        CircleView(color: .green, opacity: 1.0)
     }
 }
