@@ -10,9 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var buttonLabel = "START"
-    @State private var redLightAlpha = 0.3
-    @State private var yellowLightAlpha = 0.3
-    @State private var greenLightAlpha = 0.3
+    @State private var redLightOpacity = 0.3
+    @State private var yellowLightOpacity = 0.3
+    @State private var greenLightOpacity = 0.3
     
     var body: some View {
         ZStack {
@@ -20,9 +20,9 @@ struct ContentView: View {
                 .ignoresSafeArea()
             VStack {
                 VStack {
-                    CircleView(color: .red, opacity: redLightAlpha)
-                    CircleView(color: .yellow, opacity: yellowLightAlpha)
-                    CircleView(color: .green, opacity: greenLightAlpha)
+                    CircleView(color: .red, opacity: redLightOpacity)
+                    CircleView(color: .yellow, opacity: yellowLightOpacity)
+                    CircleView(color: .green, opacity: greenLightOpacity)
                 }
                 .frame(width: 110, height: 400)
                 Spacer()
@@ -46,21 +46,21 @@ struct ContentView: View {
     
     private func switchLight() {
         if redLightAlpha == 1.0 {
-            yellowLightAlpha = 1
-            greenLightAlpha = 0.3
-            redLightAlpha = 0.3
-        } else if yellowLightAlpha == 1.0 {
-            redLightAlpha = 0.3
-            greenLightAlpha = 1.0
-            yellowLightAlpha = 0.3
-        } else if greenLightAlpha == 1.0 {
-            redLightAlpha = 1
-            yellowLightAlpha = 0.3
-            greenLightAlpha = 0.3
+            yellowLightOpacity = 1
+            greenLightOpacity = 0.3
+            redLightOpacity = 0.3
+        } else if yellowLightOpacity == 1.0 {
+            redLightOpacity = 0.3
+            greenLightOpacity = 1.0
+            yellowLightOpacity = 0.3
+        } else if greenLightOpacity == 1.0 {
+            redLightOpacity = 1
+            yellowLightOpacity = 0.3
+            greenLightOpacity = 0.3
         } else {
-            redLightAlpha = 1.0
-            yellowLightAlpha = 0.3
-            greenLightAlpha = 0.3
+            redLightOpacity = 1.0
+            yellowLightOpacity = 0.3
+            greenLightOpacity = 0.3
             buttonLabel = "NEXT"
         }
     }
