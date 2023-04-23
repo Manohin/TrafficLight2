@@ -45,7 +45,7 @@ struct ContentView: View {
     }
     
     private func switchLight() {
-        if redLightAlpha == 1.0 {
+        if redLightOpacity == 1.0 {
             yellowLightOpacity = 1
             greenLightOpacity = 0.3
             redLightOpacity = 0.3
